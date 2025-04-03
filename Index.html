@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데일리 옷 코디 추천</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <p id="message">🔮 NFC 내게 정답을 알려줘 .. 🔮</p>
+    <button onclick="showRandomMessage()">눌러서 확인하기</button>
+
+    <script>
+        function showRandomMessage() {
+            const messages = [
+                "캐주얼 - 상의: 흰 티, 후드집업 / 하의: 연청바지, 흰 양말, 스니커즈",
+                "스트릿 - 상의: 힙한 목걸이, 오버 루즈핏 셔츠, 비니 / 하의: 빈티지 버뮤다 팬, 힙한 신발",
+                "공적인 자리 - 상의: 헨리넥, 체크 셔츠, 은색 시계, 뿔테 안경 / 하의: 검정색 슬랙스, 로퍼",
+                "꾸안꾸 - 상의: 캡 모자, 프린팅 후드티, 흰 티 / 하의: 스웻팬츠, 흰 양말, 뮬",
+                "데이트 - 상의: 밝은 색 가디건, 흰 티, 은색 시계, 반지 / 하의: 검정색 벨트, 워실 청바지, 로퍼"
+            ];
+            document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+        }
+    </script>
+</body>
+</html>
